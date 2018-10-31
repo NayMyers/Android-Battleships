@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tristan.battleship.SettingsActivity">
+
+    <com.example.tristan.battleship.PlayerScreen
+        android:visibility="invisible"
+        android:id="@+id/preview"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        app:layout_constraintLeft_toRightOf="@+id/shipTwo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:id="@+id/shipOne"
+        android:text="One Player"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/shipThree"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/shipTwo"/>
+
+    <Button
+        android:id="@+id/shipTwo"
+        android:text="Two Player"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/shipFour"
+        app:layout_constraintLeft_toRightOf="@+id/shipOne"
+        app:layout_constraintRight_toLeftOf="@+id/preview"/>
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/shipThree"
+        android:text="Place Cruiser (3)"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/shipOne"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/shipFour"
+        app:layout_constraintBottom_toTopOf="@+id/shipFive"/>
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/shipFour"
+        android:text="Place Battleship (4)"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintRight_toLeftOf="@+id/preview"
+        app:layout_constraintLeft_toRightOf="@+id/shipThree"
+        app:layout_constraintTop_toBottomOf="@+id/shipTwo"
+        app:layout_constraintBottom_toTopOf="@+id/randomPlacement"/>
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/shipFive"
+        android:text="Place Carrier (5)"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shipFour"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/randomPlacement"/>
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/randomPlacement"
+        android:text="Place remaining ships randomly and end"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shipFour"
+        app:layout_constraintLeft_toRightOf="@id/shipFive"
+        app:layout_constraintRight_toLeftOf="@+id/preview"/>
+
+</android.support.constraint.ConstraintLayout>
